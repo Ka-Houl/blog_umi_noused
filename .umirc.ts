@@ -1,46 +1,49 @@
 import { defineConfig } from 'umi';
 
 export default defineConfig({
-  routes: [
-    { path: '/', component: '@/pages/index' },
-    { path: '/list', component: '@/pages/list' },
-  ],
+  // exact: false, 
+  // path: '/', 
+  // component: '@/layouts/index',
+  // routes: [
+  //   { path: '/', component: '@/pages/index' },
+  //   { path: '/list', component: '@/pages/list' },
+  // ],
   history: {
     type: 'hash',
   },
   hash: true,
-  plugins: [
-    // ref: https://umijs.org/plugin/umi-plugin-react.html
-    [
-      'umi-plugin-react',
-      {
-        antd: true,
-        dva: true,
-        dynamicImport: { webpackChunkName: true },
-        title: {
-          defaultTitle: '个人博客',
-        },
-        dll: true,
-        locale: {
-          enable: true,
-          // default: 'en-US',
+  // plugins: [
+  //   // ref: https://umijs.org/plugin/umi-plugin-react.html
+  //   [
+  //     'umi-plugin-react',
+  //     {
+  //       antd: true,
+  //       dva: true,
+  //       dynamicImport: { webpackChunkName: true },
+  //       title: {
+  //         defaultTitle: '个人博客',
+  //       },
+  //       dll: true,
+  //       locale: {
+  //         enable: true,
+  //         // default: 'en-US',
 
-          default: 'zh-CN',
-        },
-        routes: {
-          exclude: [
-            /models\//,
-            /services\//,
-            /model\.(t|j)sx?$/,
-            /service\.(t|j)sx?$/,
-            /components\//,
-          ],
-        },
-        // chunks: ['vendors', 'umi'],
-        chunks: ['umi'],
-      },
-    ],
-  ],
+  //         default: 'zh-CN',
+  //       },
+  //       routes: {
+  //         exclude: [
+  //           /models\//,
+  //           /services\//,
+  //           /model\.(t|j)sx?$/,
+  //           /service\.(t|j)sx?$/,
+  //           /components\//,
+  //         ],
+  //       },
+  //       // chunks: ['vendors', 'umi'],
+  //       chunks: ['umi'],
+  //     },
+  //   ],
+  // ],
   chainWebpack(config, { webpack }) {
     config.optimization.splitChunks({
       chunks: 'async',
