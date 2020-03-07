@@ -1,0 +1,24 @@
+.img_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 150px;
+  //   height: 100%;
+  overflow: hidden;
+  border: 1px solid #ebeef5;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  img {
+    width: 100px;
+    height: 100px;
+    // border-radius: 5px;
+    border-radius: 50%;
+    transition: all 0.5s;
+    &:hover {
+      transform: rotate(1turn) scale(1.1);
+    }
+  }
+  h3 {
+    margin-left: 15px;
+  }
+}
