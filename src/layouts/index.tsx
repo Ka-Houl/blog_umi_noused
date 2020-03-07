@@ -1,9 +1,9 @@
 import React from 'react';
-import { Menu, Layout, Row, Col, Card, Avatar } from 'antd';
+import { Menu, Layout, Row, Col, Card } from 'antd';
 import { history } from 'umi';
-import avatarImg from '@/assets/images/avatar.jpg';
 import styles from './index.less';
-
+import Avatar from '@/components/Avatar';
+import BackTop from '@/components/BackTop';
 const { Header, Footer, Content } = Layout;
 const { Meta } = Card;
 
@@ -38,27 +38,25 @@ export default (props: any) => {
           </Row>
         </Header>
         <Content>
-          <Row justify={'center'}>
+          <Row justify={'center'} style={{ height: '2000px' }}>
             <Col
               // span={22}
-              xs={{ span: 22, offset: 2 }}
-              md={{ span: 16, offset: 2 }}
-              lg={{ span: 12, offset: 2 }}
+              xs={{ span: 22 }}
+              md={{ span: 16 }}
+              lg={{ span: 12 }}
             >
               {props.children}
             </Col>
             <Col
               //  span={2}
               xs={{ span: 0, offset: 0 }}
-              md={{ span: 6, offset: 0 }}
+              md={{ span: 8, offset: 0 }}
               lg={{ span: 6, offset: 0 }}
             >
-              <div className={styles.img_box}>
-                <img src={avatarImg} alt="" />
-                <h3>Ka_houl</h3>
-              </div>
+              <Avatar />
             </Col>
           </Row>
+          <BackTop />
         </Content>
         <Footer>Footer</Footer>
       </Layout>
