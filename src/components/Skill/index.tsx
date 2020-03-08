@@ -2,8 +2,6 @@ import React from 'react';
 import { Tooltip, Divider, Tag } from 'antd';
 
 import styles from './index.less';
-import avatarImg from '@/assets/images/avatar.jpg';
-import { MyIcon } from '@/utils';
 
 export default props => {
   return (

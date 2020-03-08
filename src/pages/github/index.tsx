@@ -2,10 +2,7 @@ import React, { Component } from 'react';
 import { history } from 'umi';
 import styles from './index.less';
 import { Button } from 'antd';
-import { connect } from 'dva';
-// @connect(({ global }) => ({
-//   global,
-// }))
+
 class Index extends Component {
   constructor(props) {
     super(props);
