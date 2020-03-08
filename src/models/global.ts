@@ -10,9 +10,9 @@
 //   },
 
 //   effects: {
-//     *saveDetail({ payload, extra }, { call, put }) {
+//     *save({ payload, extra }, { call, put }) {
 //       yield put({
-//         type: '_saveDetail',
+//         type: 'save',
 //         payload: payload,
 //       });
 
@@ -34,28 +34,6 @@
 //     },
 //   },
 //   reducers: {
-//     _fetchToken(state, action) {
-//       const data = action.payload;
-//       console.log(data, '----------------');
-//       return {
-//         ...state,
-//         token: data,
-//       };
-//     },
-//     _uploadImg(state, action) {
-//       const imgUrls = action.payload;
-//       return {
-//         ...state,
-//         imgUrls,
-//       };
-//     },
-//     _saveDetail(state, action) {
-//       const { detail } = action.payload;
-//       return {
-//         ...state,
-//         detail,
-//       };
-//     },
 //     save(state, action) {
 //       const payload = action.payload;
 //       return {

@@ -3,7 +3,9 @@ import { Menu, Layout, Row, Col, Card } from 'antd';
 import { history } from 'umi';
 import styles from './index.less';
 import Avatar from '@/components/Avatar';
+import Skill from '@/components/Skill';
 import BackTop from '@/components/BackTop';
+import WebInfo from '@/components/WebInfo';
 const { Header, Footer, Content } = Layout;
 const { Meta } = Card;
 
@@ -11,8 +13,8 @@ export default (props: any) => {
   console.log(props);
   const menu = [
     { key: '/', name: '主页' },
-    { key: '/list', name: '列表' },
-    { key: '/github', name: 'github' },
+    { key: '/self', name: '个人' },
+    { key: '/github', name: 'GitHub' },
   ];
   return (
     <>
@@ -38,7 +40,7 @@ export default (props: any) => {
           </Row>
         </Header>
         <Content>
-          <Row justify={'center'} style={{ height: '2000px' }}>
+          <Row justify={'center'} style={{ minHeight: '800px' }}>
             <Col
               // span={22}
               xs={{ span: 22 }}
@@ -54,11 +56,14 @@ export default (props: any) => {
               lg={{ span: 6, offset: 0 }}
             >
               <Avatar />
+              <Skill />
             </Col>
           </Row>
           <BackTop />
         </Content>
-        <Footer>Footer</Footer>
+        <Footer>
+          <WebInfo />
+        </Footer>
       </Layout>
     </>
   );

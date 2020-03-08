@@ -1,29 +1,33 @@
 import { defineConfig } from 'umi';
 
 export default defineConfig({
-  // exact: false, 
-  // path: '/', 
+  // exact: false,
+  // path: '/',
   // component: '@/layouts/index',
   // routes: [
   //   { path: '/', component: '@/pages/index' },
   //   { path: '/list', component: '@/pages/list' },
   // ],
   history: {
-    type: 'browser',    //router类型
+    type: 'hash', //router类型
   },
   hash: true,
   dva: {
     immer: true,
     hmr: false,
-    skipModelValidate: true
+    skipModelValidate: true,
   },
   plugins: [
-  //   // ref: https://umijs.org/plugin/umi-plugin-react.html
-  // 'umi-plugin-react',
-      // '@umijs/plugin-dva',
-      // '@umijs/preset-react'
+    //   // ref: https://umijs.org/plugin/umi-plugin-react.html
+    // 'umi-plugin-react',
+    // '@umijs/plugin-dva',
+    // '@umijs/preset-react'
   ],
-  title:'个人博客',
+  outputPath: './blog', //指定输出路径。
+  devServer: {
+    port: 9000,
+  },
+  title: '个人博客',
   chainWebpack(config, { webpack }) {
     config.optimization.splitChunks({
       chunks: 'async',

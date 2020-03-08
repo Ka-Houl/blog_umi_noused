@@ -13,19 +13,10 @@ class Index extends Component {
   }
   render() {
     return (
-      <div>
-        <h1 className={styles.title}>Page index</h1>
-        <Button
-          type="primary"
-          onClick={() => {
-            // history.push('/list');
-          }}
-        >
-          Primary
-        </Button>
-        212um2121212i plugin list11122
-        <div className="test"> 1111111</div>
-        <div className={styles.test}> index</div>
+      <div className={styles.wrapper}>
+        <a href="https://github.com/Ka-Houl" target="_blank">
+          https://github.com/Ka-Houl
+        </a>
       </div>
     );
   }

@@ -29,11 +29,11 @@ export default props => {
             <MyIcon type="icon-weixin-copy" className={styles.icon} />
           </div>
         </Tooltip>
-        <Tooltip placement="top" title="https://github.com/Ka-Houl">
+        {/* <Tooltip placement="top" title="https://github.com/Ka-Houl">
           <div>
             <MyIcon type="icon-github" className={styles.icon} />
           </div>
-        </Tooltip>
+        </Tooltip> */}
         <Tooltip placement="top" title="18883993447">
           <div>
             <MyIcon type="icon-phone" className={styles.icon} />
